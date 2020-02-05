@@ -2,16 +2,17 @@ import React from 'react';
 import '../stylesheets/Host.css'
 import { Card } from 'semantic-ui-react'
 
-const Host = (props) => {
+const hostingarea = (props) => {
   let {firstName, lastName,active,imageUrl,gender,area} = props.obj
-
+    console.log(props)
   let handleclick =  (evt) => {
     
     props.infoHandler(props.obj)
   }
+
   return(
     <Card
-      className="host"
+      className="host selected"
       
    onClick={handleclick}
    image={imageUrl}
@@ -20,5 +21,5 @@ const Host = (props) => {
   )
 }
 
-export default Host
+export default hostingarea
 //  className="host selected" change it later
